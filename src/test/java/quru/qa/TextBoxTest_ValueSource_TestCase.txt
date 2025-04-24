@@ -1,0 +1,22 @@
+Название тесткейса: Проверка Text Box только с именами из ValueSource
+
+Предусловия:
+1. Открыт сайт https://demoqa.com/text-box
+2. Браузер настроен на размер 1920x1080.
+
+Шаги:
+1. В поле "Full Name" ввести значение: Vlad Klimin.
+2. В поле "Email" ввести значение: test@example.com.
+3. В поле "Current Address" ввести значение: Default Address.
+4. В поле "Permanent Address" ввести значение: Default Address.
+5. Нажать кнопку "Submit".
+
+Ожидаемый результат:
+1. В блоке результатов отображается текст: "Name:Vlad Klimin".
+2. В блоке результатов отображается текст: "Email:test@example.com".
+3. В блоке результатов отображается текст: "Current Address :Default Address".
+4. В блоке результатов отображается текст: "Permananet Address :Default Address".
+
+Примечание: Аналогичные шаги выполняются для других имен из ValueSource:
+- Andrey Pronkin
+- Pavel Rudakov

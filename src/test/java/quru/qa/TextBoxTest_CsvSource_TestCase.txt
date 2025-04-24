@@ -1,0 +1,22 @@
+Название тесткейса: Проверка Text Box с данными из CSV
+
+Предусловия:
+1. Открыт сайт https://demoqa.com/text-box
+2. Браузер настроен на размер 1920x1080.
+
+Шаги:
+1. В поле "Full Name" ввести значение: Vlad Klimin.
+2. В поле "Email" ввести значение: klimas777@ya.ru.
+3. В поле "Current Address" ввести значение: Penza Mira 77.
+4. В поле "Permanent Address" ввести значение: Zarechny Zelenay 29A.
+5. Нажать кнопку "Submit".
+
+Ожидаемый результат:
+1. В блоке результатов отображается текст: "Name:Vlad Klimin".
+2. В блоке результатов отображается текст: "Email:klimas777@ya.ru".
+3. В блоке результатов отображается текст: "Current Address :Penza Mira 77".
+4. В блоке результатов отображается текст: "Permananet Address :Zarechny Zelenay 29A".
+
+Примечание: Аналогичные шаги выполняются для других наборов данных из CSV:
+- Andrey Pronkin, andrey12v@mail.ru, Zarechny Lenina 66, Zarechny Lenina 66
+- Pavel Rudakov, rudak@gmail.com, Zarechny Ozerskay 2, Zarechny Ozerskay 2
