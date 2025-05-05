@@ -21,7 +21,6 @@ public class TextBoxTest {
         Configuration.browserSize = "1920x1080";
     }
 
-
     @DisplayName("Тест с использованием @CsvSource")
     @ParameterizedTest(name = "Проверка Text Box с данными: {0}, {1}, {2}, {3}")
     @CsvSource({
@@ -42,7 +41,6 @@ public class TextBoxTest {
         $("#output #permanentAddress").shouldHave(Condition.text("Permananet Address :" + permanentAddress));
     }
 
-
     @DisplayName("Тест с использованием @ValueSource")
     @ParameterizedTest(name = "Проверка только имени: {0}")
     @ValueSource(strings = {
@@ -60,7 +58,6 @@ public class TextBoxTest {
         $("#output #name").shouldHave(Condition.text("Name:" + fullName));
     }
 
-
     @DisplayName("Тест с использованием @MethodSource")
     @ParameterizedTest(name = "Проверка Text Box с данными: {0}, {1}, {2}, {3}")
     @MethodSource("provideUserData")
@@ -77,7 +74,6 @@ public class TextBoxTest {
         $("#output #permanentAddress").shouldHave(Condition.text("Permananet Address :" + permanentAddress));
     }
 
-    // Метод, предоставляющий данные для @MethodSource
     static Stream<Arguments> provideUserData() {
         return Stream.of(
                 Arguments.of("Vlad Klimin", "klimas777@ya.ru", "Penza Mira 77", "Zarechny Zelenay 29A"),
@@ -87,40 +83,6 @@ public class TextBoxTest {
     }
 
     @DisplayName("Тест с использованием Enum")
-    enum User {
-        VLAD_KLIMIN("Vlad Klimin", "klimas777@ya.ru", "Penza Mira 77", "Zarechny Zelenay 29A"),
-        ANDREY_PRONKIN("Andrey Pronkin", "andrey12v@mail.ru", "Zarechny Lenina 66", "Zarechny Lenina 66"),
-        PAVEL_RUDAKOV("Pavel Rudakov", "rudak@gmail.com", "Zarechny Ozerskay 2", "Zarechny Ozerskay 2");
-
-        private final String fullName;
-        private final String email;
-        private final String currentAddress;
-        private final String permanentAddress;
-
-        User(String fullName, String email, String currentAddress, String permanentAddress) {
-            this.fullName = fullName;
-            this.email = email;
-            this.currentAddress = currentAddress;
-            this.permanentAddress = permanentAddress;
-        }
-
-        public String getFullName() {
-            return fullName;
-        }
-
-        public String getEmail() {
-            return email;
-        }
-
-        public String getCurrentAddress() {
-            return currentAddress;
-        }
-
-        public String getPermanentAddress() {
-            return permanentAddress;
-        }
-    }
-
     @ParameterizedTest(name = "Проверка Text Box с данными из Enum: {0}")
     @EnumSource(User.class)
     public void textBoxTestWithEnumSource(User user) {
